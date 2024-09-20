@@ -1,16 +1,14 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
+const pretendard = localFont({
+  src: "./fonts/PretendardVariable.woff2",
+  display: "swap",
   weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+  variable: "--font-pretendard",
 });
 
 export const metadata: Metadata = {
@@ -24,11 +22,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+    <html lang="en" className={`${pretendard.variable}`}>
+      <body className={`${pretendard.className} antialiased text-text`}>
+        <Header />
+        <main className="pt-[60px]">{children}</main>
+        <Footer />
       </body>
     </html>
   );
