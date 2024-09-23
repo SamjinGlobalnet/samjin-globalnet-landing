@@ -25,7 +25,7 @@ const Header = () => {
             className="!w-[240px] tab:!w-[360px] pc:!w-[456px]"
           />
           <div
-            className="w-[24px] h-[24px] cursor-pointer flex justify-center items-center tab:w-[48px] tab:h-[48px]"
+            className="w-[24px] h-[24px] cursor-pointer flex pc:hidden justify-center items-center tab:w-[40px] tab:h-[40px]"
             onClick={openModal}
           >
             <Image
@@ -33,9 +33,30 @@ const Header = () => {
               width={40}
               height={40}
               alt="Contact Icon"
-              className="tab:!w-[40px] tab:!h-[40px]"
+              className="!w-full !h-full"
             />
           </div>
+          <button
+            className="group w-[180px] h-[48px] hidden pc:flex justify-center items-center gap-[8px] bg-primary"
+            onClick={openModal}
+          >
+            <Image
+              src={"/images/contact_w.png"}
+              width={24}
+              height={24}
+              alt="Contact Icon"
+            />
+            <span className="text-white text-[18px] font-bold leading-[23.4px] tracking-[4%]">
+              Contact Us
+            </span>
+            <Image
+              src={"/images/arrowright_w.png"}
+              width={24}
+              height={24}
+              alt="Contact Icon"
+              className="hidden group-hover:block"
+            />
+          </button>
         </div>
       </header>
       {open && <ContactModal onClose={closeModal} />}

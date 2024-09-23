@@ -3,6 +3,7 @@ import React, { useCallback, useState } from "react";
 import Section from "./Section";
 import axios from "axios";
 import { validateEmail } from "@/utils/validator";
+import Image from "next/image";
 
 const SubscribeSection = () => {
   const [email, setEmail] = useState("");
@@ -18,6 +19,8 @@ const SubscribeSection = () => {
       setEmail("");
     }
   }, [email]);
+
+  const disabeld = !validateEmail(email.trim());
 
   return (
     <Section className="bg-primary">
@@ -36,10 +39,18 @@ const SubscribeSection = () => {
             onChange={(e) => setEmail(e.target.value)}
           />
           <button
-            className="w-full h-[54px] bg-white text-primary text-center text-[16px] font-bold tracking-[0.64px] tab:max-w-[200px] tab:text-[18px] tab:tracking-[0.72px]"
+            className="group w-full h-[54px] bg-white text-primary text-center text-[16px] font-bold tracking-[0.64px] tab:max-w-[200px] tab:text-[18px] tab:tracking-[0.72px] flex justify-center items-center gap-[8px]"
+            disabled={disabeld}
             onClick={onSubcribe}
           >
-            SUBSCRIBE
+            <span>SUBSCRIBE</span>
+            <Image
+              src={"/images/arrowright_r.png"}
+              width={24}
+              height={24}
+              alt="Contact Icon"
+              className="hidden group-hover:block"
+            />
           </button>
         </div>
       </div>

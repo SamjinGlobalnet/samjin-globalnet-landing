@@ -1,8 +1,8 @@
 import { validateEmail } from "@/utils/validator";
 import axios from "axios";
 
-export async function POST(request: Request) {
-  const { email } = (await request.json()) as { email: string };
+export async function POST(req: Request) {
+  const { email } = (await req.json()) as { email: string };
 
   if (!email.trim()) return Response.json({ ok: false });
   if (!validateEmail(email.trim())) return Response.json({ ok: false });
