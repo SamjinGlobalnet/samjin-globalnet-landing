@@ -17,7 +17,8 @@ const config: Config = {
       screens: {
         mob: "480px",
         tab: "768px",
-        pc: "1440px",
+        pc: "1024px",
+        max: "1440px",
       },
     },
   },

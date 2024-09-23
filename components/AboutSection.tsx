@@ -7,7 +7,7 @@ import SectionContent from "./SectionContent";
 const AboutSection = () => {
   return (
     <Section>
-      <div className="flex flex-col items-center gap-[32px] mob:gap-[40px]">
+      <div className="flex flex-col items-center gap-[32px] tab:gap-[40px] pc:gap-[48px]">
         <SectionTitle title="About us" />
         <SectionContent>
           Founded in 1970,{" "}
@@ -15,7 +15,7 @@ const AboutSection = () => {
           been exporting Korean food products worldwide, ensuring high-quality
           standards and expanding its presence in America, Europe, and Asia.
         </SectionContent>
-        <div className="py-[20px] grid grid-cols-2 gap-[24px] mob:py-[48px] mob:grid-cols-3 mob:gap-[12px]">
+        <div className="py-[20px] grid grid-cols-2 gap-[24px] tab:py-[48px] tab:grid-cols-3 tab:gap-[12px] pc:py-[48px] pc:grid-cols-6 pc:gap-[24px]">
           {[
             {
               number: 1,
@@ -44,14 +44,14 @@ const AboutSection = () => {
           ].map((item) => (
             <div
               key={item.number}
-              className="w-[140px] p-[20px] flex flex-col items-center gap-[24px] mob:w-[220px]"
+              className="w-[140px] p-[20px] flex flex-col items-center gap-[24px] tab:w-[220px]"
             >
               <Image
                 src={`/images/about_${item.number}.png`}
-                width={48}
-                height={48}
+                width={96}
+                height={96}
                 alt={item.text}
-                className="mob:!w-[96px] mob:!h-[96px]"
+                className="tab:!w-[96px] tab:!h-[96px]"
               />
               <div className="text-center text-[18px] leading-[130%] tracking-[-0.36px]">
                 {item.text}

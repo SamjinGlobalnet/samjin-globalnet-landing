@@ -2,9 +2,9 @@ import React from "react";
 
 const SectionContent = ({ children }: { children: React.ReactNode }) => {
   return (
-    <p className="w-full text-center text-[24px] font-medium leading-[130%] tracking-[-0.48px] mob:text-start mob:text-[28px] mob:tracking-[-0.56px]">
+    <div className="w-full text-center text-[24px] font-medium leading-[130%] tracking-[-0.48px] tab:text-start tab:text-[28px] tab:tracking-[-0.56px] pc:text-[32px] pc:leading-[41.6px] pc:tracking-[-2%]">
       {children}
-    </p>
+    </div>
   );
 };
 
