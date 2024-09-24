@@ -6,7 +6,7 @@ import SectionContent from "./SectionContent";
 
 const AboutSection = () => {
   return (
-    <Section>
+    <Section id="about">
       <div className="flex flex-col items-center gap-[32px] tab:gap-[40px] pc:gap-[48px]">
         <SectionTitle title="About us" />
         <SectionContent>

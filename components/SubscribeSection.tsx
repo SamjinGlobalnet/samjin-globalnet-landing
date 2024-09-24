@@ -49,7 +49,7 @@ const SubscribeSection = () => {
               width={24}
               height={24}
               alt="Contact Icon"
-              className="hidden group-hover:block"
+              className={disabeld ? "hidden" : "hidden group-hover:block"}
             />
           </button>
         </div>

@@ -3,6 +3,7 @@ import Section from "./Section";
 import SectionTitle from "./SectionTitle";
 import Image from "next/image";
 import SectionContent from "./SectionContent";
+import CountUp from "./CountUp";
 
 const NetworkSection = () => {
   return (
@@ -27,15 +28,15 @@ const NetworkSection = () => {
           <div className="w-full flex gap-[10px] z-10 tab:gap-[12px] pc:gap-[60px]">
             {[
               {
-                title: "54",
+                count: 54,
                 content: "Years In Business",
               },
               {
-                title: "10,000+",
+                count: 10000,
                 content: "Products",
               },
               {
-                title: "65",
+                count: 65,
                 content: "Countries",
               },
             ].map((item, index) => (
@@ -46,9 +47,7 @@ const NetworkSection = () => {
                   boxShadow: "0px 0px 5.3px 0px rgba(0, 0, 0, 0.23)",
                 }}
               >
-                <div className="text-primary text-center text-[24px] font-extrabold leading-[100%] tracking-[-0.48px] tab:text-[48px] tab:tracking-[-0.96px]">
-                  {item.title}
-                </div>
+                <CountUp index={index} start={0} end={item.count} />
                 <div className="text-black text-center text-[16px] font-medium leading-[130%] tracking-[-0.32px] tab:text-[24px] tab:tracking-[-0.48px]">
                   {item.content}
                 </div>

@@ -1,9 +1,29 @@
 "use client";
 import Image from "next/image";
-import React, { useCallback, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import ContactModal from "./ContactModal";
 
 const Header = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const targetElement = document.getElementById("about");
+    if (!targetElement) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (!isVisible) {
+          setIsVisible(entry.isIntersecting);
+        }
+      },
+      { threshold: 0.8 } // 10% of the target is visible
+    );
+
+    observer.observe(targetElement);
+
+    return () => observer.disconnect();
+  }, [isVisible]);
+
   const [open, setOpen] = useState(false);
 
   const openModal = useCallback(() => {
@@ -37,7 +57,9 @@ const Header = () => {
             />
           </div>
           <button
-            className="group w-[180px] h-[48px] hidden pc:flex justify-center items-center gap-[8px] bg-primary"
+            className={`group w-[180px] h-[48px] justify-center items-center gap-[8px] bg-primary ${
+              isVisible ? "hidden" : "pc:flex"
+            }`}
             onClick={openModal}
           >
             <Image
