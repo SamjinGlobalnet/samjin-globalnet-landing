@@ -58,7 +58,7 @@ const Header = () => {
           </div>
           <button
             className={`group w-[180px] h-[48px] justify-center items-center gap-[8px] bg-primary ${
-              isVisible ? "hidden" : "pc:flex"
+              isVisible ? "hidden" : "hidden pc:flex"
             }`}
             onClick={openModal}
           >
