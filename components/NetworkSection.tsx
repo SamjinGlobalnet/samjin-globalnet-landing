@@ -32,7 +32,7 @@ const NetworkSection = () => {
                 content: "Years In Business",
               },
               {
-                count: 10000,
+                count: 10,
                 content: "Products",
               },
               {
@@ -47,7 +47,12 @@ const NetworkSection = () => {
                   boxShadow: "0px 0px 5.3px 0px rgba(0, 0, 0, 0.23)",
                 }}
               >
-                <CountUp index={index} start={0} end={item.count} />
+                <CountUp
+                  index={index}
+                  start={0}
+                  end={item.count}
+                  duration={700}
+                />
                 <div className="text-black text-center text-[16px] font-medium leading-[130%] tracking-[-0.32px] tab:text-[24px] tab:tracking-[-0.48px]">
                   {item.content}
                 </div>

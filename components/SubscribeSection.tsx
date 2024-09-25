@@ -25,15 +25,15 @@ const SubscribeSection = () => {
   return (
     <Section className="bg-primary">
       <div className="flex flex-col items-center gap-[32px]">
-        <p className="flex flex-col text-white text-center text-[32px] font-bold leading-[130%] tracking-[-0.64px]">
-          <span>Join our community for company</span>
-          <span>news and product updates – subscribe now!</span>
+        <p className="w-full max-w-[856px] flex flex-col text-white text-center text-[32px] font-bold leading-[41.6px] tracking-[-0.64px] pc:text-[48px] pc:leading-[62.4px] pc:tracking-[-2%]">
+          Join our community for company news and product updates – subscribe
+          now!
         </p>
         <div className="w-full max-w-[590px] flex flex-col items-center tab:flex-row">
           <input
             type="email"
             required
-            className="w-full h-[54px] border-4 border-white bg-primary text-center text-white text-[16px] font-semibold leading-[130%] tracking-[-0.32px] rounded-none outline-none placeholder:text-[rgba(255, 255, 255, 0.80)] placeholder:font-medium tab:text-[18px] tab:text-start tab:px-[20px]"
+            className="w-full h-[54px] border-4 border-white bg-primary text-center text-white text-[16px] font-semibold leading-[130%] tracking-[-0.32px] rounded-none outline-none placeholder:text-white placeholder:font-medium tab:text-[18px] tab:text-start tab:px-[20px]"
             placeholder="Enter your email address"
             value={email}
             onChange={(e) => setEmail(e.target.value)}

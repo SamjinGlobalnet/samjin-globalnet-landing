@@ -35,7 +35,7 @@ const Header = () => {
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 w-full h-[60px] px-[20px] bg-white border-b border-b-[#ccc] tab:h-[100px] z-[100]">
+      <header className="sticky pc:static top-0 left-0 right-0 w-full h-[60px] px-[20px] bg-white border-b border-b-[#ccc] tab:h-[100px] z-[100] pc:border-b-0">
         <div className="w-full h-full max-w-screen-max mx-auto flex justify-between items-center">
           <Image
             src={"/images/samjin_logo.png"}

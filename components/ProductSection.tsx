@@ -72,7 +72,9 @@ const ProductSection = () => {
       <div className="flex flex-col items-center gap-[32px] tab:gap-[80px] pc:gap-[80px]">
         <SectionTitle
           title="Product"
-          right={<AnimatedProductButton toggleCount={toggleCount} />}
+          right={
+            <AnimatedProductButton count={count} toggleCount={toggleCount} />
+          }
         />
         <SectionContent>
           For more than 50 years, we have been committed to helping our partners
@@ -101,16 +103,45 @@ const ProductSection = () => {
           ))}
         </div>
         <button
-          className="w-full flex justify-center items-center gap-[8px] py-[12px] px-[24px] border border-primary cursor-pointer text-cneter text-[18px] font-bold text-primary tab:max-w-[182px] pc:hidden"
+          className="w-full flex justify-center items-center gap-[8px] py-[12px] px-[24px] border border-primary cursor-pointer text-cneter text-[18px] font-bold text-primary tab:max-w-[182px]  transition-all duration-500 ease-out hover:bg-primary hover:text-white group pc:hidden"
           onClick={toggleCount}
         >
           View More{" "}
-          <Image
-            src={"/images/plus_r.png"}
-            width={24}
-            height={24}
-            alt="Plus Icon"
-          />
+          {count === 4 ? (
+            <>
+              <Image
+                src={"/images/plus_r.png"}
+                width={24}
+                height={24}
+                alt="Plus Icon"
+                className="block group-hover:hidden"
+              />
+              <Image
+                src={"/images/plus_w.png"}
+                width={24}
+                height={24}
+                alt="Plus Icon"
+                className="hidden group-hover:block"
+              />
+            </>
+          ) : (
+            <>
+              <Image
+                src={"/images/arrowup_r.png"}
+                width={24}
+                height={24}
+                alt="Arrowup Icon"
+                className="block group-hover:hidden"
+              />
+              <Image
+                src={"/images/arrowup_w.png"}
+                width={24}
+                height={24}
+                alt="Arrowup Icon"
+                className="hidden group-hover:block"
+              />
+            </>
+          )}
         </button>
       </div>
     </Section>

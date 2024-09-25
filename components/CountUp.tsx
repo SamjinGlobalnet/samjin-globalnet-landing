@@ -72,8 +72,8 @@ const CountUp: React.FC<CountUpProps> = ({
       ref={countRef}
       className="text-primary text-center text-[24px] font-extrabold leading-[100%] tracking-[-0.48px] tab:text-[48px] tab:tracking-[-0.96px]"
     >
-      {isVisible ? count.toLocaleString() : start.toLocaleString()}{" "}
-      {index === 1 ? "+" : ""}
+      {isVisible ? count.toLocaleString() : start.toLocaleString()}
+      {index === 1 ? "K +" : ""}
     </div>
   );
 };

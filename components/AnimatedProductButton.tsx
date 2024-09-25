@@ -2,10 +2,12 @@ import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
 
 interface AnimatedProductButtonProps {
+  count?: number;
   toggleCount?: () => void;
 }
 
 const AnimatedProductButton: React.FC<AnimatedProductButtonProps> = ({
+  count,
   toggleCount,
 }) => {
   const [isVisible, setIsVisible] = useState(false);
@@ -32,17 +34,46 @@ const AnimatedProductButton: React.FC<AnimatedProductButtonProps> = ({
   return (
     <button
       ref={buttonRef}
-      className={`w-full flex justify-center items-center gap-[8px] py-[12px] px-[24px] border border-primary cursor-pointer text-cneter text-[18px] font-bold text-primary tab:max-w-[182px] transition-all duration-500 ease-out
+      className={`w-full flex justify-center items-center gap-[8px] py-[12px] px-[24px] border border-primary cursor-pointer text-cneter text-[18px] font-bold text-primary tab:max-w-[182px] transition-all duration-500 ease-out hover:bg-primary hover:text-white group
         ${isVisible ? "translate-x-0" : "translate-x-[calc(1000%)]"}`}
       onClick={toggleCount}
     >
       View More{" "}
-      <Image
-        src={"/images/plus_r.png"}
-        width={24}
-        height={24}
-        alt="Plus Icon"
-      />
+      {count === 4 ? (
+        <>
+          <Image
+            src={"/images/plus_r.png"}
+            width={24}
+            height={24}
+            alt="Plus Icon"
+            className="block group-hover:hidden"
+          />
+          <Image
+            src={"/images/plus_w.png"}
+            width={24}
+            height={24}
+            alt="Plus Icon"
+            className="hidden group-hover:block"
+          />
+        </>
+      ) : (
+        <>
+          <Image
+            src={"/images/arrowup_r.png"}
+            width={24}
+            height={24}
+            alt="Arrowup Icon"
+            className="block group-hover:hidden"
+          />
+          <Image
+            src={"/images/arrowup_w.png"}
+            width={24}
+            height={24}
+            alt="Arrowup Icon"
+            className="hidden group-hover:block"
+          />
+        </>
+      )}
     </button>
   );
 };

@@ -41,7 +41,7 @@ export default function RootLayout({
     <html lang="en" className={`${pretendard.variable}`}>
       <body className={`${pretendard.className} antialiased text-text`}>
         <Header />
-        <main className="pt-[60px] tab:pt-[100px]">{children}</main>
+        <main className="">{children}</main>
         <Footer />
       </body>
     </html>
