@@ -15,49 +15,49 @@ const BrandSection = () => {
           globe.
         </SectionContent>
         <div className="w-full flex flex-col items-center gap-[12px] pc:py-[48px] pc:gap-0 pc:flex-row">
-          <div className="w-full flex justify-center items-center gap-[30px] tab:gap-[60px] pc:gap-0">
-            <div className="tab:w-[220px] pc:w-full">
+          <div className="w-full flex justify-center items-center gap-[30px] tab:gap-[60px] pc:gap-0 pc:w-2/5">
+            <div className="w-full max-w-[100px] tab:max-w-[182px] pc:max-w-[288px]">
               <Image
                 src={"/images/brand_1.png"}
-                width={280}
+                width={288}
                 height={180}
                 alt="brand 1"
                 className="!w-full"
               />
             </div>
-            <div className="tab:w-[220px] pc:w-full">
+            <div className="w-full max-w-[100px] tab:max-w-[182px] pc:max-w-[288px]">
               <Image
                 src={"/images/brand_2.png"}
-                width={280}
+                width={288}
                 height={180}
                 alt="brand 2"
                 className="!w-full"
               />
             </div>
           </div>
-          <div className="w-full flex justify-center items-center pc:gap-0">
-            <div className="tab:w-[220px] pc:w-full">
+          <div className="w-full flex justify-center items-center pc:gap-0 pc:w-3/5">
+            <div className="w-full max-w-[100px] tab:max-w-[220px] pc:max-w-[288px]">
               <Image
                 src={"/images/brand_3.png"}
-                width={280}
+                width={288}
                 height={180}
                 alt="brand 3"
                 className="!w-full"
               />
             </div>
-            <div className="tab:w-[220px] pc:w-full">
+            <div className="w-full max-w-[100px] tab:max-w-[220px] pc:max-w-[288px]">
               <Image
                 src={"/images/brand_4.png"}
-                width={280}
+                width={288}
                 height={180}
                 alt="brand 4"
                 className="!w-full"
               />
             </div>
-            <div className="tab:w-[220px] pc:w-full">
+            <div className="w-full max-w-[100px] tab:max-w-[220px] pc:max-w-[288px]">
               <Image
                 src={"/images/brand_5.png"}
-                width={280}
+                width={288}
                 height={180}
                 alt="brand 5"
                 className="!w-full"
