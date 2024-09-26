@@ -4,7 +4,6 @@ import Section from "./Section";
 import SectionTitle from "./SectionTitle";
 import Image from "next/image";
 import SectionContent from "./SectionContent";
-import AnimatedProductButton from "./AnimatedProductButton";
 
 const items = [
   {
@@ -70,12 +69,7 @@ const ProductSection = () => {
   return (
     <Section id="product">
       <div className="flex flex-col items-center gap-[32px] tab:gap-[80px] pc:gap-[80px]">
-        <SectionTitle
-          title="Product"
-          right={
-            <AnimatedProductButton count={count} toggleCount={toggleCount} />
-          }
-        />
+        <SectionTitle title="Product" />
         <SectionContent>
           For more than 50 years, we have been committed to helping our partners
           find everything they need, from essential pantry items like Gochujang
@@ -103,10 +97,10 @@ const ProductSection = () => {
           ))}
         </div>
         <button
-          className="w-full flex justify-center items-center gap-[8px] py-[12px] px-[24px] border border-primary cursor-pointer text-cneter text-[18px] font-bold text-primary tab:max-w-[182px]  transition-all duration-500 ease-out hover:bg-primary hover:text-white group pc:hidden"
+          className="group w-full max-w-[230px] flex justify-center items-center gap-[8px] py-[12px] px-[24px] border border-primary cursor-pointer text-cneter text-[18px] font-bold text-primary transition-all duration-500 ease-out hover:bg-primary hover:text-white"
           onClick={toggleCount}
         >
-          View More{" "}
+          {count === 4 ? "View More" : "View Less"}{" "}
           {count === 4 ? (
             <>
               <Image

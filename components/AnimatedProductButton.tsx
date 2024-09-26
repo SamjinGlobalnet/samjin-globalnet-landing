@@ -38,7 +38,7 @@ const AnimatedProductButton: React.FC<AnimatedProductButtonProps> = ({
         ${isVisible ? "translate-x-0" : "translate-x-[calc(1000%)]"}`}
       onClick={toggleCount}
     >
-      View More{" "}
+      {count === 4 ? "View More" : "View Less"}{" "}
       {count === 4 ? (
         <>
           <Image
