@@ -44,7 +44,7 @@ const AboutSection = () => {
           ].map((item) => (
             <div
               key={item.number}
-              className="w-[140px] p-[20px] flex flex-col items-center gap-[24px] tab:w-[220px]"
+              className="wfull max-w-[140px] p-[20px] flex flex-col items-center gap-[24px] tab:max-w-[220px]"
             >
               <Image
                 src={`/images/about_${item.number}.png`}
