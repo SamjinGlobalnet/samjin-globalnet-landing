@@ -12,7 +12,7 @@ const pretendard = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Samjin Globalnet | Leading Korean Food Exporter Worlwide",
+  title: "Samjin Globalnet | Leading Korean Food Exporter Worldwide",
   description:
     "Sice 1970, Samjin Globalnet has been exporting high-quality Korean food products to over 65 countries, including the Americas, Europe, and Asia. We provide export logistics, sourcing, private labels, and consultation services.",
   openGraph: {
