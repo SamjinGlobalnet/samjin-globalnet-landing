@@ -28,7 +28,7 @@ const NetworkSection = () => {
           <div className="w-full flex gap-[10px] z-10 tab:gap-[12px] pc:gap-[60px]">
             {[
               {
-                count: 54,
+                count: 55,
                 content: "Years In Business",
               },
               {
